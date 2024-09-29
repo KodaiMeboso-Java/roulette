@@ -1,38 +1,98 @@
-.App {
+.roulette-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 40px;
+  display: flex;
+  margin-top: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.roulette {
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roulette-wheel {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(#bf95ff 0% 33.33%,
+      #baffe2 33.33% 66.66%,
+      #aee0ff 66.66% 100%);
+}
+
+.roulette-label-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .roulette-label {
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  writing-mode: vertical-rl;
+  transform: translate(0, -50%);
+} */
+
+.roulette-label {
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  /* transform: translateY(-220px); */
+  /* ここでY軸方向に移動 */
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+}
+
+.roulette-pin {
+  position: absolute;
+  top: 50%;
+  right: -16px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+  border: solid rgba(0, 0, 0, 0);
+  border-width: 16px 56px;
+  border-right-color: #ff6a00;
+  transform: translateY(-50%);
+}
+
+/* ---------------------------------------------------- */
+
+.button-container {
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* ---------------------------------------------------- */
+
+.input-container {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.name-input {
+  margin-right: 16px;
+}
+
+/* ---------------------------------------------------- */
+
+.name-list-item {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  background: #b6fdff;
+}
+
+.name-display {
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+}
+
+.delete-button {
+  margin-left: 8px;
 }
